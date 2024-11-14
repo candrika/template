@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .coupon-card {
+            position: relative;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .coupon-card::before, .coupon-card::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+        }
+        .coupon-card::before {
+            top: 50%;
+            left: -10px;
+            transform: translateY(-50%);
+        }
+        .coupon-card::after {
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+        }
+        .coupon-card .top-notch {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 20px;
+            background: white;
+        }
+        .coupon-card .top-notch::before, .coupon-card .top-notch::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 0%;
+        }
+        .coupon-card .top-notch::before {
+            left: 10px;
+        }
+        .coupon-card .top-notch::after {
+            right: 10px;
+        }
+        .coupon-card .wave {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: white;
+            background: linear-gradient(
+                to right, 
+                white 10%, 
+                transparent 10%, 
+                transparent 20%, 
+                white 20%, 
+                white 30%, 
+                transparent 30%, 
+                transparent 40%, 
+                white 40%, 
+                white 50%,
+                transparent 50%, 
+                transparent 60%, 
+                white 60%,
+                white 70%, 
+                transparent 70%, 
+                transparent 80%, 
+                white 80%
+            );
+            background-size: 40px 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .coupon-card .wave::before, .coupon-card .wave::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+        }
+        .coupon-card .wave::before {
+            left: 10px;
+        }
+        .coupon-card .wave::after {
+            right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-10">
+        <div class="flex items-center">
+            <div class="flex-shrink-0">
+                <div class="bg-pink-500 rounded-full p-4">
+                    <i class="fas fa-percent text-white text-2xl"></i>
+                </div>
+            </div>
+            <div class="ml-4">
+                <h1 class="text-2xl font-semibold text-gray-800">Kuy, check this voucher before check out!</h1>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-wrap justify-between gap-4">
+            <div class="w-full md:w-1/3 mb-4 md:mb-0 relative">
+                <div class="coupon-card">
+                    <div class="top-notch"></div>
+                    <div class="wave"></div>
+                    <h2 class="text-xl font-semibold text-gray-800">Concert Pass 2024</h2>
+                    <p class="text-gray-500">for Modern Event Fair #13</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <p class="text-gray-500">Discount</p>
+                            <p class="text-green-500 font-semibold">Rp 15.000</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Period</p>
+                            <p class="text-gray-800 font-semibold">Jun 16, 2024</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">min. transaction Rp 150.000</p>
+                    <button class="mt-4 w-full bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 rounded-lg">Use Voucher</button>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 mb-4 md:mb-0 relative">
+                <div class="coupon-card">
+                    <div class="top-notch"></div>
+                    <div class="wave"></div>
+                    <h2 class="text-xl font-semibold text-gray-800">Concert Pass 2024</h2>
+                    <p class="text-gray-500">for Modern Event Fair #13</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <p class="text-gray-500">Discount</p>
+                            <p class="text-green-500 font-semibold">Rp 15.000</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Period</p>
+                            <p class="text-gray-800 font-semibold">Jun 16, 2024</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">min. transaction Rp 150.000</p>
+                    <button class="mt-4 w-full bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 rounded-lg">Use Voucher</button>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 relative">
+                <div class="coupon-card">
+                    <div class="top-notch"></div>
+                    <div class="wave"></div>
+                    <h2 class="text-xl font-semibold text-gray-800">Concert Pass 2024</h2>
+                    <p class="text-gray-500">for Modern Event Fair #13</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <div>
+                            <p class="text-gray-500">Discount</p>
+                            <p class="text-green-500 font-semibold">Rp 15.000</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Period</p>
+                            <p class="text-gray-800 font-semibold">Jun 16, 2024</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">min. transaction Rp 150.000</p>
+                    <button class="mt-4 w-full bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 rounded-lg">Use Voucher</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
